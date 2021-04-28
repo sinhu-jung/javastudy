@@ -7,17 +7,16 @@ public class GoodsApp {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		String name;
-		int price, stock;
 
 		Goods[] goods = new Goods[COUNT_GOODS];
 
 		// 상품 입력
-		for(int i = 0; i <= COUNT_GOODS; i++) {
-			name = scanner.nextLine();
-			price = scanner.nextInt();
-			stock = scanner.nextInt();
+		for(int i = 0; i < COUNT_GOODS; i++) {
+			String name = scanner.next();
+			int price = scanner.nextInt();
+			int stock = scanner.nextInt();
 			
+			goods[i] = new Goods();
 			goods[i].setName(name);
 			goods[i].setPrice(price);
 			goods[i].setStock(stock);
