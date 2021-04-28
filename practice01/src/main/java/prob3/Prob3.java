@@ -13,9 +13,15 @@ public class Prob3 {
 		int inum = scanner.nextInt();
 		int isum = 0;
 		
-		for (int i = 0; i <= inum; i++) {
-			if (inum % 2 == 0 && i % 2 == 0 || inum % 2 != 0 && i % 2 != 0) {
+		for(int i = 0; i <= inum; i++) {
+			if(inum % 2 == 1 && i % 2 == 1 ) {
 				isum += i;
+			}
+			else {
+				if(i % 2 == 0 && inum % 2 ==0) {
+					isum += i;
+				}
+				
 			}
 		}
 		
