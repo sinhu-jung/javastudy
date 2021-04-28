@@ -1,0 +1,33 @@
+package prob02;
+
+public class Goods {
+	
+	private String name;
+	private int price;
+	private int stock;
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public int getStock() {
+		return stock;
+	}
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
+	
+	public void showInfo() {
+		System.out.println(name + "(가격:" + price + "원)이 " + stock + "개 입고 되었습니다.");
+	}
+	
+	
+}
