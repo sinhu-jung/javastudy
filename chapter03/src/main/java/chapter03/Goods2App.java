@@ -10,8 +10,13 @@ public class Goods2App {
 		goods.setCountSold(20);
 		goods.setCountStock(30);
 		
+		System.out.println(goods.calcDiscountPrice(0.5));
+		
 		goods.setPrice(-1);
 		goods.showInfo();
+		
+		Goods2 goods2 = new Goods2("cannon", 20000, 20, 30);
+		goods2.showInfo();
 		
 	}
 
