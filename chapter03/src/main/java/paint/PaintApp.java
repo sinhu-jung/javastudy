@@ -17,29 +17,40 @@ public class PaintApp {
 		Point point3 = new ColorPoint(50, 100, "red");
 		point3.show();
 		point3.show(true);
-		drawPoint(point3);
+		draw(point3);
 		
 		Rect rect = new Rect();
-		drawShape(rect);
+//		drawShape(rect);
+		draw(rect);
 		
 		Triangle triangle = new Triangle();
-		drawShape(triangle);
+//		drawShape(triangle);
+		draw(triangle);
 		
 		Circle circle = new Circle();
-		drawShape(circle);
+//		drawShape(circle);
+		draw(circle);
+		
+//		Drawable drawable = new GraphicText("hello~")
+//		draw(drawable);
+		draw(new GraphicText("hello~"));
+	}
+
+	public static void draw(Drawable drawable) {
+		drawable.draw();
 	}
 	
 //	public static void drawColorPoint(ColorPoint pt) {
 //		pt.show();
 //	}
 	
-	public static void drawPoint(Point pt) {
-		pt.show();
-	}
-
-	public static void drawShape(Shape shape) {
-		shape.draw();
-	}
+//	public static void drawPoint(Point pt) {
+//		pt.show();
+//	}
+//
+//	public static void drawShape(Shape shape) {
+//		shape.draw();
+//	}
 	
 //	public static void drawRect(Rect rect) {
 //		rect.draw();
