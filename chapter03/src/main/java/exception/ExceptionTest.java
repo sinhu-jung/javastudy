@@ -1,5 +1,14 @@
 package exception;
 
+/**
+ * 
+ * 
+ * @author BIT_R41
+ *
+ * try~catch~finally 구문 만들기 연습
+ *
+ */
+
 public class ExceptionTest {
 
 	public static void main(String[] args) {
@@ -21,10 +30,12 @@ public class ExceptionTest {
 			// 3. 정상 종료
 			return;
 		}finally {
-			System.out.println("some codes...4");
+			//finally는 예외발생으로 정상 종료 되도 실행이됨
+			/*자원 정리*/
+			System.out.println("some codes...final(자원정리)");
 		}
 		
-		System.out.println("some codes...5");
+		// try catch finally를 사용했을때는 아래 쪽에 코드 남겨두지 말기
 		
 	}
 
