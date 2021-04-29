@@ -37,6 +37,22 @@ public class Book {
 		this.author = author;
 	}
 	
+	public void rent() {
+		System.out.println(title + "이(가) 대여 됐습니다.");
+		this.stateCode = 0;
+	}
+
+	public void print() {
+		String state;
+		if(stateCode>0) {
+			state = "재고있음";
+		}
+		else {
+			state = "대여중";
+		}
+		System.out.println("책 재목:" + title + ", 작가:" + author + ", 대여 유무:"+ state);
+	}
+	
 	
 	
 }
