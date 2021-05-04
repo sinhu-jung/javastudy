@@ -25,46 +25,14 @@ public class EchoServer {
 			serverSocket.bind(new InetSocketAddress("0.0.0.0", PORT));
 			log("starts... [port:" + PORT + "]");
 			
-			// 3. accept
-			Socket socket = serverSocket.accept();
-			
-			InetSocketAddress inetRemoteSocketAddress = (InetSocketAddress)socket.getRemoteSocketAddress();
-			String remoteHostAddress = inetRemoteSocketAddress.getAddress().getHostAddress();
-			int remoteHostPort = inetRemoteSocketAddress.getPort();
-			log("connected by client[" + remoteHostAddress + ":" + remoteHostPort +"]");
-			
-			try {
-				// 4. IO Stream 받아오기
-				BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream(), "utf-8"));
-				PrintWriter pw = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(), "utf-8"), true);
+			while(true) {
+				// 3. accept
+				Socket socket = serverSocket.accept();
 				
-				while(true) {
-					// 4. 데이터 읽기
-					String data = br.readLine();
-					if(data == null) {
-						log("closed by client");
-						break;
-					}
-					
-					log("received:" + data);
+				Thread thread = new EchoServerReceiveThread(socket);
+				thread.start();
 				
-					// 5. 데이터 쓰기
-					pw.println(data);
-				}
-			} catch(SocketException e) {
-				log("suddenly closed by client");
-			} catch(IOException e) {
-				e.printStackTrace();
-			} finally {
-				try {
-					if(socket != null && socket.isClosed() == false) {
-						socket.close();
-					}
-				} catch(IOException e) {
-					e.printStackTrace();
-				}
 			}
-			
 			
 			
 		} catch (IOException e) {
@@ -79,7 +47,7 @@ public class EchoServer {
 			}
 		}
 	}
-	private static void log(String log) {
+	public static void log(String log) {
 		System.out.println("[EchoServer] " + log);
 	}
 }
