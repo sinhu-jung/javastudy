@@ -55,6 +55,7 @@
 		<module>chapter04</module>
 		<module>finaltest</module>
 		<module>studydatastruct</module>
+		<module>studysocket</module>
 	</modules>
 
 </project>

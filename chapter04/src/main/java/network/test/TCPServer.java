@@ -18,8 +18,7 @@ public class TCPServer {
 			
 			// 2. 바인딩(Binding)
 			//    Socket에 InetSocketAddress (IPAddress + Port)
-			//    IPAddress : 0.0.0.0 ( 모든 ip 연결 허용)
-			
+			//    IPAddress : 0.0.0.0 ( 모든 ip 연결 허용)			
 			serverSocket.bind(new InetSocketAddress("0.0.0.0", 5000));
 			
 			// 3. accept
