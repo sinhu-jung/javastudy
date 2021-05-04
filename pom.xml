@@ -54,6 +54,7 @@
 		<module>practice05</module>
 		<module>chapter04</module>
 		<module>finaltest</module>
+		<module>studydatastruct</module>
 	</modules>
 
 </project>
