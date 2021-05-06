@@ -56,6 +56,7 @@
 		<module>finaltest</module>
 		<module>studydatastruct</module>
 		<module>studysocket</module>
+		<module>network</module>
 	</modules>
 
 </project>
