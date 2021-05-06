@@ -26,6 +26,7 @@ public class ChatClientThread extends Thread {
 				}
 				
 				System.out.println(data);
+				System.out.print(">>");
 			}
 		} catch (SocketException e) {
 			ChatClient.log("suddenly closed by server");
