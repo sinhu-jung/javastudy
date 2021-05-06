@@ -61,7 +61,7 @@ public class ChatClient {
 			}
 			
 		} catch (SocketException e) {
-			log("채팅 종료");
+			log("suddenly closed by server");
 		} catch (IOException e) {
 			log("error: " + e);
 		} finally {

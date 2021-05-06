@@ -21,7 +21,7 @@ public class ChatClientThread extends Thread {
 			
 			while (true) {
 				String data = br.readLine();
-				if(data == null) {
+				if("quit".equals(data) == true) {
 					break;
 				}
 				
@@ -29,9 +29,17 @@ public class ChatClientThread extends Thread {
 				System.out.print(">>");
 			}
 		} catch (SocketException e) {
-			ChatClient.log("suddenly closed by server");
+			ChatClient.log("채팅 종료");
 		} catch (IOException e) {
 			ChatClient.log("error:" + e);
+		} finally {
+			try {
+				if(socket != null && socket.isClosed() == false) {
+					socket.close();
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 
