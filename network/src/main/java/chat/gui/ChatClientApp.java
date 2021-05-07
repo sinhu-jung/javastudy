@@ -50,9 +50,9 @@ public class ChatClientApp {
 				new ChatWindow(nickname, socket).show();
 			}
 		} catch (ConnectException ex) {
-			log("서버[" + SERVER_IP + ":" + SERVER_PORT + "]에 연결할 수 없습니다.");
+			log("서버에 연결할 수 없습니다.");
 		} catch (Exception ex) {
-			log("다음 이유로 프로그램을 종료 합니다 :" + ex);
+			log("error :" + ex);
 		} finally {
 			if (scanner != null) {
 				scanner.close();
