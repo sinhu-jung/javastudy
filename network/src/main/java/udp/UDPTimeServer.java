@@ -33,8 +33,7 @@ public class UDPTimeServer {
 			// 3. 데이터 송신
 			String now = new SimpleDateFormat("yyyy-MM-dd hh mm ss").format(new Date());
 			byte[] sendData = now.getBytes();
-			DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, receivePacket.getAddress(),
-					receivePacket.getPort());
+			DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, receivePacket.getAddress(), receivePacket.getPort());
 			socket.send(sendPacket);
 		}
 		} catch (SocketException e) {

@@ -37,8 +37,7 @@ public class UDPTimeClient {
 			// 전송
 			String now = new SimpleDateFormat("yyyy-MM-dd hh mm ss").format(new Date());
 			byte[] sendData = now.getBytes();
-			DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length,
-					new InetSocketAddress(SERVER_IP, SERVER_PORT));
+			DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, new InetSocketAddress(SERVER_IP, SERVER_PORT));
 			socket.send(sendPacket);
 
 			
