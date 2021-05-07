@@ -17,7 +17,6 @@ public class UDPTimeServer {
 		// 1. 소켓 생성
 		DatagramSocket socket = null;
 		
-		// 1. 소켓 생성
 		try {
 		socket = new DatagramSocket(PORT);
 		

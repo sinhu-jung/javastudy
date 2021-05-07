@@ -30,7 +30,7 @@ public class UDPTimeClient {
 			System.out.println(">");
 			String line = scanner.nextLine();
 
-			if ("exid".equals(line)) {
+			if ("quit".equals(line)) {
 				break;
 			}
 
